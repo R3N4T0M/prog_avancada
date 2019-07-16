@@ -1,7 +1,7 @@
 import java.io.*;
 import java.net.*;
 
-class ClienteTCP {
+class clienteTCP {
  public static void main(String argv[]) throws Exception
  {
   String frase;
@@ -9,7 +9,7 @@ class ClienteTCP {
   
   BufferedReader doUsuario = new BufferedReader(new InputStreamReader(System.in));
   
-  Socket socketCliente = new Socket(”nomeHosp", 6789);
+  Socket socketCliente = new Socket("LocalHost", 6789);
   
   DataOutputStream paraServidor = new DataOutputStream(socketCliente.getOutputStream());
   
@@ -21,7 +21,7 @@ class ClienteTCP {
   
   fraseModificada = doServidor.readLine();
   
-  System.out.println(”Do Servidor: " + fraseModificada);
+  System.out.println("Do Servidor: " + fraseModificada);
   
   socketCliente.close();
  }
