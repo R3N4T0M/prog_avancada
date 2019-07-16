@@ -1,7 +1,7 @@
 import java.io.*;
 import java.net.*;
 
-class servidorTCP {
+class servidorTCP{
   public static void main(String argv[]) throws Exception
   {
     String fraseCliente;
@@ -16,12 +16,12 @@ class servidorTCP {
       
       InputStreamReader(socketConexao.getInputStream()));
       
-      DataOutputStream paraCliente = new DataOutputStream(socketConexão.getOutputStream());
+      DataOutputStream paraCliente = new DataOutputStream(socketConexao.getOutputStream());
       
       fraseCliente= doCliente.readLine();
-      fraseEmMaiusculas= fraseCliente.toUpperCase() + '\n';
+      FraseMaiusculas= fraseCliente.toUpperCase() + '\n';
       
-      paraCliente.writeBytes(fraseEmMaiusculas);
+      paraCliente.writeBytes(FraseMaiusculas);
     }
   }
 }
